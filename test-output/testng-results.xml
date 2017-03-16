@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5895" started-at="2017-03-14T19:16:50Z" finished-at="2017-03-14T19:16:56Z">
+  <suite name="Default suite" duration-ms="6298" started-at="2017-03-16T17:15:13Z" finished-at="2017-03-16T17:15:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5895" started-at="2017-03-14T19:16:50Z" finished-at="2017-03-14T19:16:56Z">
-      <class name="com.tanmaysarkar.demo.regression.MyTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="setUp" is-config="true" duration-ms="3154" started-at="2017-03-14T15:16:50Z" finished-at="2017-03-14T15:16:54Z">
+    <test name="Default test" duration-ms="6298" started-at="2017-03-16T17:15:13Z" finished-at="2017-03-16T17:15:19Z">
+      <class name="com.myPractice.demo.regression.MyTest">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteSetUp" is-config="true" duration-ms="9" started-at="2017-03-16T13:15:13Z" finished-at="2017-03-16T13:15:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="setUp" is-config="true" duration-ms="4900" started-at="2017-03-16T13:15:13Z" finished-at="2017-03-16T13:15:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test01()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="test01" duration-ms="714" started-at="2017-03-14T15:16:54Z" finished-at="2017-03-14T15:16:54Z">
+        <test-method status="PASS" signature="testAccessForgotPasswordPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="testAccessForgotPasswordPg" duration-ms="532" started-at="2017-03-16T13:15:18Z" finished-at="2017-03-16T13:15:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test01 -->
-        <test-method status="PASS" signature="testBlankPassword()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="testBlankPassword" duration-ms="32" started-at="2017-03-14T15:16:54Z" finished-at="2017-03-14T15:16:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBlankPassword -->
-        <test-method status="PASS" signature="testBlankUserName()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="testBlankUserName" duration-ms="576" started-at="2017-03-14T15:16:54Z" finished-at="2017-03-14T15:16:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBlankUserName -->
-        <test-method status="PASS" signature="testInvalidPassword()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="testInvalidPassword" duration-ms="604" started-at="2017-03-14T15:16:55Z" finished-at="2017-03-14T15:16:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidPassword -->
-        <test-method status="PASS" signature="testInvalidUsrNmPassWd()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="testInvalidUsrNmPassWd" duration-ms="650" started-at="2017-03-14T15:16:56Z" finished-at="2017-03-14T15:16:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testInvalidUsrNmPassWd -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.tanmaysarkar.demo.regression.MyTest@a2431d0]" name="cleanUp" is-config="true" duration-ms="120" started-at="2017-03-14T15:16:56Z" finished-at="2017-03-14T15:16:56Z">
+        </test-method> <!-- testAccessForgotPasswordPg -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="cleanUp" is-config="true" duration-ms="851" started-at="2017-03-16T13:15:18Z" finished-at="2017-03-16T13:15:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-      </class> <!-- com.tanmaysarkar.demo.regression.MyTest -->
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteCleanUp" is-config="true" duration-ms="1" started-at="2017-03-16T13:15:19Z" finished-at="2017-03-16T13:15:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteCleanUp -->
+      </class> <!-- com.myPractice.demo.regression.MyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,2 +1,6 @@
 com\myPractice\demo\page\LoginPage.class
 com\myPractice\demo\regression\MyTest.class
+com\myPractice\demo\Base.class
+com\myPractice\demo\page\AboutPage.class
+com\myPractice\demo\page\ForgotPasswordPage.class
+com\myPractice\demo\page\CreateAccountPage.class

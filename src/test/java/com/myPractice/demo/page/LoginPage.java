@@ -6,12 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-import com.myPractice.demo.Base;
+/**
+ * Login Page Object
+ * 
+ * <P>
+ * User comes here before any other page
+ * <P>
+ * Suitable locators, methods associated with this Page Object defined here
+ * 
+ * @author himanshu.keskar@gmail.com
+ * @version 1.0
+ */
 
 public class LoginPage {
 
-	//First change
-	
 	/** Variables and constants */
 	final WebDriver driver;
 
@@ -91,7 +99,64 @@ public class LoginPage {
 		return true;
 
 	}
-	
-	
+
+	// Clicks on "Create Account" link and returns a Create Account Page object
+	public CreateAccountPage createAccount() {
+
+		try {
+			WebElement ca = lnk_CreateAcct;
+			ca.click();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(" 'Create Account' link could not be clicked successfully");
+		}
+
+		return PageFactory.initElements(driver, CreateAccountPage.class);
+	}
+
+	// Returns an About page object
+	public AboutPage clickLnkAbout() {
+
+		try {
+			WebElement ca = lnk_About;
+			ca.click();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(" 'About' link could not be clicked successfully");
+		}
+
+		return PageFactory.initElements(driver, AboutPage.class);
+	}
+
+	// Returns a Forgot Password page object
+	public ForgotPasswordPage clickLnkResetPassword() {
+
+		try {
+			WebElement rp = lnk_ResetPassword;
+			rp.click();
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println(" 'Reset Password' link could not be clicked successfully");
+		}
+
+		return PageFactory.initElements(driver, ForgotPasswordPage.class);
+	}
+
+	/*
+	 * Checks if the user name text box is visible on the page and indirectly
+	 * that the Login page is loaded
+	 */
+	public boolean isLoginPageLoaded() {
+
+		WebElement un = txtbx_UserName;
+
+		if (un != null) {
+			return true;
+		}
+
+		else {
+			return false;
+		}
+	}
 
 }

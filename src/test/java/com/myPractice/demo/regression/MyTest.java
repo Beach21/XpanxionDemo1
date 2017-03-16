@@ -17,6 +17,10 @@ import org.testng.annotations.Test;
 import com.myPractice.demo.Base;
 import com.myPractice.demo.page.LoginPage;
 
+import com.myPractice.demo.page.AboutPage;
+import com.myPractice.demo.page.CreateAccountPage;
+import com.myPractice.demo.page.ForgotPasswordPage;
+
 public class MyTest {
 
 	public WebDriver d = null;
@@ -139,5 +143,45 @@ public class MyTest {
 		boolean passwordRequirement = loginPage.isPasswordRequired();
 		Assert.assertTrue(passwordRequirement, "Password field is not a required field");
 	}
+	
+	 /* Tests to access other pages  */
+	  
+	  @Test
+	  
+	 public void testAccessCreateAccountPg() { 
+		
+		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		  boolean isCreateAccountPageLoaded = false;
+		  CreateAccountPage ca = loginPage.createAccount();	
+		  isCreateAccountPageLoaded = ca.isCreateAccountPageLoaded();
+		  
+		  Assert.assertTrue(isCreateAccountPageLoaded, "Create Account page not loaded");	 
+	  }
+	  
+	  @Test
+	  
+	  public void testAccessAboutPg() { 
+	 			  
+		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		  boolean isAboutPageLoaded = false;
+	 	  AboutPage ap = loginPage.clickLnkAbout();	
+	 	  isAboutPageLoaded = ap.isAboutPageLoaded(d);
+	 	  
+	 	  Assert.assertTrue(isAboutPageLoaded, " 'About' page not loaded");	 
+	   }
+	  
+	@Test
+	  
+	  public void testAccessForgotPasswordPg() { 
+	 	
+		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+	 	  boolean isForgotPasswordPageLoaded = false;
+	 	  ForgotPasswordPage fp = loginPage.clickLnkResetPassword();	
+	 	  isForgotPasswordPageLoaded = fp.isForgotPasswordPageLoaded();
+	 	  
+	 	  Assert.assertTrue(isForgotPasswordPageLoaded, "Create Account page not loaded");	 
+	   }  
 
-}
+	}
+
+
