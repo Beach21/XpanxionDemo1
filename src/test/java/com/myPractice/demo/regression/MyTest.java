@@ -8,48 +8,56 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.myPractice.demo.Base;
-import com.myPractice.demo.page.LoginPage;
-
 import com.myPractice.demo.page.AboutPage;
 import com.myPractice.demo.page.CreateAccountPage;
 import com.myPractice.demo.page.ForgotPasswordPage;
+import com.myPractice.demo.page.LoginPage;
+
+/**
+ * Login Test Class
+ * 
+ * <P>
+ * All tests for the login class are implemented here
+ * <P>
+ * 
+ * 
+ * @author himanshu.keskar@gmail.com
+ * @version 1.0
+ */
 
 public class MyTest {
 
 	public WebDriver d = null;
-	String baseURL = "";	
-	Base b = new Base();	
-	
+	String baseURL = "";
+	Base b = new Base();
+
 	@BeforeSuite
-	void suiteSetUp(){
-		
+	void suiteSetUp() {
+
 		baseURL = "https://www.leagueplanit.com";
 	}
-	
+
 	@AfterSuite
-	void suiteCleanUp(){
+	void suiteCleanUp() {
 		if (d != null) {
 			d.quit();
 		}
 	}
 
 	@BeforeMethod
-	 void setUp() {		
-		
+	void setUp() {
+
 		d = b.getDriver();
-		//d.manage().window().maximize();
+		// d.manage().window().maximize();
 		d.get(baseURL);
 		d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 
 	}
-	
 
 	@AfterMethod
 	protected void cleanUp() {
@@ -57,12 +65,11 @@ public class MyTest {
 		if (d != null) {
 			d.quit();
 		}
-	}		
-
+	}
 
 	@Test
 	public void test01() {
-		
+
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 
 		String errorMessageString = "";
@@ -79,7 +86,7 @@ public class MyTest {
 	@Test
 
 	public void testInvalidPassword() {
-		
+
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 
 		String errorMessageString = "";
@@ -95,7 +102,7 @@ public class MyTest {
 	@Test
 
 	public void testInvalidUsrNmPassWd() {
-		
+
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 
 		String errorMessageString = "";
@@ -120,7 +127,7 @@ public class MyTest {
 	@Test
 
 	public void testBlankUserName() {
-		
+
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 
 		String errorMessageString = "";
@@ -139,49 +146,47 @@ public class MyTest {
 	public void testBlankPassword() {
 
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-		
+
 		boolean passwordRequirement = loginPage.isPasswordRequired();
 		Assert.assertTrue(passwordRequirement, "Password field is not a required field");
 	}
-	
-	 /* Tests to access other pages  */
-	  
-	  @Test
-	  
-	 public void testAccessCreateAccountPg() { 
-		
-		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-		  boolean isCreateAccountPageLoaded = false;
-		  CreateAccountPage ca = loginPage.createAccount();	
-		  isCreateAccountPageLoaded = ca.isCreateAccountPageLoaded();
-		  
-		  Assert.assertTrue(isCreateAccountPageLoaded, "Create Account page not loaded");	 
-	  }
-	  
-	  @Test
-	  
-	  public void testAccessAboutPg() { 
-	 			  
-		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-		  boolean isAboutPageLoaded = false;
-	 	  AboutPage ap = loginPage.clickLnkAbout();	
-	 	  isAboutPageLoaded = ap.isAboutPageLoaded(d);
-	 	  
-	 	  Assert.assertTrue(isAboutPageLoaded, " 'About' page not loaded");	 
-	   }
-	  
-	@Test
-	  
-	  public void testAccessForgotPasswordPg() { 
-	 	
-		  LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-	 	  boolean isForgotPasswordPageLoaded = false;
-	 	  ForgotPasswordPage fp = loginPage.clickLnkResetPassword();	
-	 	  isForgotPasswordPageLoaded = fp.isForgotPasswordPageLoaded();
-	 	  
-	 	  Assert.assertTrue(isForgotPasswordPageLoaded, "Create Account page not loaded");	 
-	   }  
 
+	/* Tests to access other pages */
+
+	@Test
+
+	public void testAccessCreateAccountPg() {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		boolean isCreateAccountPageLoaded = false;
+		CreateAccountPage ca = loginPage.createAccount();
+		isCreateAccountPageLoaded = ca.isCreateAccountPageLoaded();
+
+		Assert.assertTrue(isCreateAccountPageLoaded, "Create Account page not loaded");
 	}
 
+	@Test
 
+	public void testAccessAboutPg() {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		boolean isAboutPageLoaded = false;
+		AboutPage ap = loginPage.clickLnkAbout();
+		isAboutPageLoaded = ap.isAboutPageLoaded(d);
+
+		Assert.assertTrue(isAboutPageLoaded, " 'About' page not loaded");
+	}
+
+	@Test
+
+	public void testAccessForgotPasswordPg() {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		boolean isForgotPasswordPageLoaded = false;
+		ForgotPasswordPage fp = loginPage.clickLnkResetPassword();
+		isForgotPasswordPageLoaded = fp.isForgotPasswordPageLoaded();
+
+		Assert.assertTrue(isForgotPasswordPageLoaded, "Create Account page not loaded");
+	}
+
+}
