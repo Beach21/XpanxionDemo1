@@ -52,8 +52,7 @@ public class MyTest {
 	@BeforeMethod
 	void setUp() {
 
-		d = b.getDriver();
-		// d.manage().window().maximize();
+		d = b.getDriver("Chrome");		
 		d.get(baseURL);
 		d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 

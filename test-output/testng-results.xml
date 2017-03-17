@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6298" started-at="2017-03-16T17:15:13Z" finished-at="2017-03-16T17:15:19Z">
+  <suite name="Default suite" duration-ms="7243" started-at="2017-03-17T23:24:52Z" finished-at="2017-03-17T23:24:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6298" started-at="2017-03-16T17:15:13Z" finished-at="2017-03-16T17:15:19Z">
+    <test name="Default test" duration-ms="7243" started-at="2017-03-17T23:24:52Z" finished-at="2017-03-17T23:24:59Z">
       <class name="com.myPractice.demo.regression.MyTest">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteSetUp" is-config="true" duration-ms="9" started-at="2017-03-16T13:15:13Z" finished-at="2017-03-16T13:15:13Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteSetUp" is-config="true" duration-ms="0" started-at="2017-03-17T19:24:52Z" finished-at="2017-03-17T19:24:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="setUp" is-config="true" duration-ms="4900" started-at="2017-03-16T13:15:13Z" finished-at="2017-03-16T13:15:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="setUp" is-config="true" duration-ms="5592" started-at="2017-03-17T19:24:52Z" finished-at="2017-03-17T19:24:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAccessForgotPasswordPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="testAccessForgotPasswordPg" duration-ms="532" started-at="2017-03-16T13:15:18Z" finished-at="2017-03-16T13:15:18Z">
+        <test-method status="PASS" signature="testInvalidPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="testInvalidPassword" duration-ms="732" started-at="2017-03-17T19:24:58Z" finished-at="2017-03-17T19:24:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testAccessForgotPasswordPg -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="cleanUp" is-config="true" duration-ms="851" started-at="2017-03-16T13:15:18Z" finished-at="2017-03-16T13:15:19Z">
+        </test-method> <!-- testInvalidPassword -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="cleanUp" is-config="true" duration-ms="918" started-at="2017-03-17T19:24:58Z" finished-at="2017-03-17T19:24:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteCleanUp" is-config="true" duration-ms="1" started-at="2017-03-16T13:15:19Z" finished-at="2017-03-16T13:15:19Z">
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@224edc67]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-17T19:24:59Z" finished-at="2017-03-17T19:24:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
