@@ -270,42 +270,42 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(8);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAccessAboutPg')
+data.setCell(0, 1, 'testBlankUserName')
 data.setCell(0, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(0, 3, 2279);
+data.setCell(0, 3, 2262);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testAccessCreateAccountPg')
 data.setCell(1, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(1, 3, 1854);
+data.setCell(1, 3, 1362);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'test01')
+data.setCell(2, 1, 'testInvalidPassword')
 data.setCell(2, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(2, 3, 820);
+data.setCell(2, 3, 1160);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testInvalidUsrNmPassWd')
 data.setCell(3, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(3, 3, 764);
+data.setCell(3, 3, 1026);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testInvalidPassword')
+data.setCell(4, 1, 'test01')
 data.setCell(4, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(4, 3, 729);
+data.setCell(4, 3, 828);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testBlankUserName')
+data.setCell(5, 1, 'testAccessAboutPg')
 data.setCell(5, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(5, 3, 695);
+data.setCell(5, 3, 815);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testAccessForgotPasswordPg')
 data.setCell(6, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(6, 3, 521);
+data.setCell(6, 3, 773);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testBlankPassword')
 data.setCell(7, 2, 'com.myPractice.demo.regression.MyTest')
-data.setCell(7, 3, 39);
+data.setCell(7, 3, 63);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -336,105 +336,113 @@ return data;
                 <span class="method-name">suiteSetUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">init</span>
+                <span class="method-start">10 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">36 ms</span>
+                <span class="method-start">154 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test01</span>
-                <span class="method-start">8375 ms</span>
+                <span class="method-start">5684 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">9196 ms</span>
+                <span class="method-name">getResult([TestResult name=test01 status=SUCCESS method=MyTest.test01()[pri:0, instance:com.myPractice.demo.re...)</span>
+                <span class="method-start">6512 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">10454 ms</span>
+                <span class="method-start">7551 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAccessAboutPg</span>
-                <span class="method-start">27107 ms</span>
+                <span class="method-start">11405 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">29386 ms</span>
+                <span class="method-name">getResult([TestResult name=testAccessAboutPg status=SUCCESS method=MyTest.testAccessAboutPg()[pri:0, instance:...)</span>
+                <span class="method-start">12221 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">30151 ms</span>
+                <span class="method-start">13166 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAccessCreateAccountPg</span>
-                <span class="method-start">35708 ms</span>
+                <span class="method-start">17843 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">37562 ms</span>
+                <span class="method-name">getResult([TestResult name=testAccessCreateAccountPg status=SUCCESS method=MyTest.testAccessCreateAccountPg()[...)</span>
+                <span class="method-start">19206 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">38324 ms</span>
+                <span class="method-start">20139 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testAccessForgotPasswordPg</span>
-                <span class="method-start">43386 ms</span>
+                <span class="method-start">24861 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">43908 ms</span>
+                <span class="method-name">getResult([TestResult name=testAccessForgotPasswordPg status=SUCCESS method=MyTest.testAccessForgotPasswordPg(...)</span>
+                <span class="method-start">25634 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">44727 ms</span>
+                <span class="method-start">26659 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testBlankPassword</span>
-                <span class="method-start">52921 ms</span>
+                <span class="method-start">31871 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">52960 ms</span>
+                <span class="method-name">getResult([TestResult name=testBlankPassword status=SUCCESS method=MyTest.testBlankPassword()[pri:0, instance:...)</span>
+                <span class="method-start">31934 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">53874 ms</span>
+                <span class="method-start">33007 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testBlankUserName</span>
-                <span class="method-start">64072 ms</span>
+                <span class="method-start">40202 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">64767 ms</span>
+                <span class="method-name">getResult([TestResult name=testBlankUserName status=SUCCESS method=MyTest.testBlankUserName()[pri:0, instance:...)</span>
+                <span class="method-start">42464 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">65562 ms</span>
+                <span class="method-start">43472 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidPassword</span>
-                <span class="method-start">72947 ms</span>
+                <span class="method-start">51281 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">73676 ms</span>
+                <span class="method-name">getResult([TestResult name=testInvalidPassword status=SUCCESS method=MyTest.testInvalidPassword()[pri:0, insta...)</span>
+                <span class="method-start">52441 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">74446 ms</span>
+                <span class="method-start">53451 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidUsrNmPassWd</span>
-                <span class="method-start">79546 ms</span>
+                <span class="method-start">60190 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">80310 ms</span>
+                <span class="method-name">getResult([TestResult name=testInvalidUsrNmPassWd status=SUCCESS method=MyTest.testInvalidUsrNmPassWd()[pri:0,...)</span>
+                <span class="method-start">61216 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-test after">
+                <span class="method-name">endReport</span>
+                <span class="method-start">62190 ms</span>
+              </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteCleanUp</span>
-                <span class="method-start">81197 ms</span>
+                <span class="method-start">62583 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

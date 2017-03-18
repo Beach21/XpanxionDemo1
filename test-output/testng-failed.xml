@@ -5,11 +5,13 @@
     <classes>
       <class name="com.myPractice.demo.regression.MyTest">
         <methods>
-          <include name="testBlankPassword"/>
+          <include name="init"/>
           <include name="setUp"/>
+          <include name="testInvalidPassword"/>
           <include name="suiteSetUp"/>
-          <include name="cleanUp"/>
+          <include name="getResult"/>
           <include name="suiteCleanUp"/>
+          <include name="endReport"/>
         </methods>
       </class> <!-- com.myPractice.demo.regression.MyTest -->
     </classes>

@@ -1,4 +1,4 @@
-package com.myPractice.demo.regression;
+package com.myPractice.demo.regression.loginTests;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +14,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.myPractice.demo.Base;
@@ -83,7 +84,6 @@ public class MyTest {
 
 	}
 
-
 	@Test
 	public void test01() {
 
@@ -116,9 +116,9 @@ public class MyTest {
 		loginPage.login("Username", "invalidPassword");
 		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
 		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);
-		
+
 		/* Uncomment this to simulate a failure */
-		//isPasswordinMsg = false;
+		// isPasswordinMsg = false;
 
 		Assert.assertTrue(isPasswordinMsg, "Correct message is not displayed for incorrect password");
 		test.log(LogStatus.PASS, "Correct message is displayed for incorrect password");
@@ -131,10 +131,10 @@ public class MyTest {
 
 			String screenshotPath = Screenshot.capture(d, "screenshot");
 			test.log(LogStatus.FAIL, result.getThrowable());
-			test.log(LogStatus.FAIL, "Screenshot Below: " + test.addScreenCapture(screenshotPath));		
+			test.log(LogStatus.FAIL, "Screenshot Below: " + test.addScreenCapture(screenshotPath));
 			System.out.println(screenshotPath);
 		}
-		
+
 		if (d != null) {
 			d.quit();
 		}
@@ -155,6 +155,61 @@ public class MyTest {
 		boolean isUserNameAndPassWdinMsg = false;
 
 		loginPage.login("invalidUserName", "invalidPassword");
+		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
+		isUserNameinMsg = StringUtils.containsIgnoreCase(errorMessageString, badUserNameString);
+		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);
+
+		// Make sure both user name and password are mentioned in the error
+		// message
+		isUserNameAndPassWdinMsg = (isUserNameinMsg) && (isPasswordinMsg);
+		Assert.assertTrue(isUserNameAndPassWdinMsg,
+				"Correct message is not displayed for incorrect user name and password");
+	}
+
+	/* Testing with parameters */
+
+	@Test
+	@Parameters({ "name", "password" })
+
+	public void testParamInvalidUsrNmPassWd(String name, String password) throws InterruptedException {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+
+		String errorMessageString = "";
+		String badUserNameString = "username";
+		String badPasswordString = "password";
+		boolean isUserNameinMsg = false;
+		boolean isPasswordinMsg = false;
+		boolean isUserNameAndPassWdinMsg = false;
+
+		loginPage.login(name, password);
+		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
+		isUserNameinMsg = StringUtils.containsIgnoreCase(errorMessageString, badUserNameString);
+		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);
+
+		// Make sure both user name and password are mentioned in the error
+		// message
+		isUserNameAndPassWdinMsg = (isUserNameinMsg) && (isPasswordinMsg);
+		Assert.assertTrue(isUserNameAndPassWdinMsg,
+				"Correct message is not displayed for incorrect user name and password");
+	}
+
+	/* Testing with data provider */
+
+	@Test(dataProvider = "SearchProvider", dataProviderClass = LoginDataProvider.class)
+
+	public void testDataProviderInvalidUsrNmPassWd(String name, String password) throws InterruptedException {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+
+		String errorMessageString = "";
+		String badUserNameString = "username";
+		String badPasswordString = "password";
+		boolean isUserNameinMsg = false;
+		boolean isPasswordinMsg = false;
+		boolean isUserNameAndPassWdinMsg = false;
+
+		loginPage.login(name, password);
 		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
 		isUserNameinMsg = StringUtils.containsIgnoreCase(errorMessageString, badUserNameString);
 		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);

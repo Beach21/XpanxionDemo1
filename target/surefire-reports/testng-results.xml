@@ -2,112 +2,176 @@
 <testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="81096" started-at="2017-03-16T18:30:06Z" finished-at="2017-03-16T18:31:27Z">
+  <suite name="Suite" duration-ms="62552" started-at="2017-03-18T18:35:16Z" finished-at="2017-03-18T18:36:18Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="81096" started-at="2017-03-16T18:30:06Z" finished-at="2017-03-16T18:31:27Z">
+    <test name="Test" duration-ms="62552" started-at="2017-03-18T18:35:16Z" finished-at="2017-03-18T18:36:18Z">
       <class name="com.myPractice.demo.regression.MyTest">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="suiteSetUp" is-config="true" duration-ms="13" started-at="2017-03-16T14:30:06Z" finished-at="2017-03-16T14:30:06Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="suiteSetUp" is-config="true" duration-ms="10" started-at="2017-03-18T14:35:16Z" finished-at="2017-03-18T14:35:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="8338" started-at="2017-03-16T14:30:06Z" finished-at="2017-03-16T14:30:14Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="init" is-config="true" duration-ms="131" started-at="2017-03-18T14:35:16Z" finished-at="2017-03-18T14:35:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="5530" started-at="2017-03-18T14:35:16Z" finished-at="2017-03-18T14:35:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test01()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="test01" duration-ms="820" started-at="2017-03-16T14:30:14Z" finished-at="2017-03-16T14:30:15Z">
+        <test-method status="PASS" signature="test01()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="test01" duration-ms="828" started-at="2017-03-18T14:35:21Z" finished-at="2017-03-18T14:35:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test01 -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="1258" started-at="2017-03-16T14:30:15Z" finished-at="2017-03-16T14:30:16Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="1039" started-at="2017-03-18T14:35:22Z" finished-at="2017-03-18T14:35:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=test01 status=SUCCESS method=MyTest.test01()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="16653" started-at="2017-03-16T14:30:16Z" finished-at="2017-03-16T14:30:33Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="3854" started-at="2017-03-18T14:35:23Z" finished-at="2017-03-18T14:35:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAccessAboutPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testAccessAboutPg" duration-ms="2279" started-at="2017-03-16T14:30:33Z" finished-at="2017-03-16T14:30:35Z">
+        <test-method status="PASS" signature="testAccessAboutPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testAccessAboutPg" duration-ms="815" started-at="2017-03-18T14:35:27Z" finished-at="2017-03-18T14:35:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccessAboutPg -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="764" started-at="2017-03-16T14:30:35Z" finished-at="2017-03-16T14:30:36Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="945" started-at="2017-03-18T14:35:28Z" finished-at="2017-03-18T14:35:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAccessAboutPg status=SUCCESS method=MyTest.testAccessAboutPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="5557" started-at="2017-03-16T14:30:36Z" finished-at="2017-03-16T14:30:42Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="4677" started-at="2017-03-18T14:35:29Z" finished-at="2017-03-18T14:35:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAccessCreateAccountPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testAccessCreateAccountPg" duration-ms="1854" started-at="2017-03-16T14:30:42Z" finished-at="2017-03-16T14:30:43Z">
+        <test-method status="PASS" signature="testAccessCreateAccountPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testAccessCreateAccountPg" duration-ms="1362" started-at="2017-03-18T14:35:34Z" finished-at="2017-03-18T14:35:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccessCreateAccountPg -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="762" started-at="2017-03-16T14:30:43Z" finished-at="2017-03-16T14:30:44Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="932" started-at="2017-03-18T14:35:35Z" finished-at="2017-03-18T14:35:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAccessCreateAccountPg status=SUCCESS method=MyTest.testAccessCreateAccountPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="5062" started-at="2017-03-16T14:30:44Z" finished-at="2017-03-16T14:30:49Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="4722" started-at="2017-03-18T14:35:36Z" finished-at="2017-03-18T14:35:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testAccessForgotPasswordPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testAccessForgotPasswordPg" duration-ms="521" started-at="2017-03-16T14:30:49Z" finished-at="2017-03-16T14:30:50Z">
+        <test-method status="PASS" signature="testAccessForgotPasswordPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testAccessForgotPasswordPg" duration-ms="773" started-at="2017-03-18T14:35:41Z" finished-at="2017-03-18T14:35:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccessForgotPasswordPg -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="819" started-at="2017-03-16T14:30:50Z" finished-at="2017-03-16T14:30:51Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="1025" started-at="2017-03-18T14:35:41Z" finished-at="2017-03-18T14:35:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAccessForgotPasswordPg status=SUCCESS method=MyTest.testAccessForgotPasswordPg()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="8194" started-at="2017-03-16T14:30:51Z" finished-at="2017-03-16T14:30:59Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="5212" started-at="2017-03-18T14:35:42Z" finished-at="2017-03-18T14:35:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testBlankPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testBlankPassword" duration-ms="39" started-at="2017-03-16T14:30:59Z" finished-at="2017-03-16T14:30:59Z">
+        <test-method status="PASS" signature="testBlankPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testBlankPassword" duration-ms="63" started-at="2017-03-18T14:35:48Z" finished-at="2017-03-18T14:35:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankPassword -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="914" started-at="2017-03-16T14:30:59Z" finished-at="2017-03-16T14:31:00Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="1072" started-at="2017-03-18T14:35:48Z" finished-at="2017-03-18T14:35:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBlankPassword status=SUCCESS method=MyTest.testBlankPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="10198" started-at="2017-03-16T14:31:00Z" finished-at="2017-03-16T14:31:10Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="7195" started-at="2017-03-18T14:35:49Z" finished-at="2017-03-18T14:35:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testBlankUserName()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testBlankUserName" duration-ms="695" started-at="2017-03-16T14:31:10Z" finished-at="2017-03-16T14:31:11Z">
+        <test-method status="PASS" signature="testBlankUserName()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testBlankUserName" duration-ms="2262" started-at="2017-03-18T14:35:56Z" finished-at="2017-03-18T14:35:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testBlankUserName -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="794" started-at="2017-03-16T14:31:11Z" finished-at="2017-03-16T14:31:11Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="1007" started-at="2017-03-18T14:35:58Z" finished-at="2017-03-18T14:35:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testBlankUserName status=SUCCESS method=MyTest.testBlankUserName()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="7384" started-at="2017-03-16T14:31:11Z" finished-at="2017-03-16T14:31:19Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="7809" started-at="2017-03-18T14:35:59Z" finished-at="2017-03-18T14:36:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testInvalidPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testInvalidPassword" duration-ms="729" started-at="2017-03-16T14:31:19Z" finished-at="2017-03-16T14:31:20Z">
+        <test-method status="PASS" signature="testInvalidPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testInvalidPassword" duration-ms="1160" started-at="2017-03-18T14:36:07Z" finished-at="2017-03-18T14:36:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidPassword -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="769" started-at="2017-03-16T14:31:20Z" finished-at="2017-03-16T14:31:20Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="1009" started-at="2017-03-18T14:36:08Z" finished-at="2017-03-18T14:36:09Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=MyTest.testInvalidPassword()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="setUp" is-config="true" duration-ms="5100" started-at="2017-03-16T14:31:20Z" finished-at="2017-03-16T14:31:25Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="setUp" is-config="true" duration-ms="6739" started-at="2017-03-18T14:36:09Z" finished-at="2017-03-18T14:36:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testInvalidUsrNmPassWd()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="testInvalidUsrNmPassWd" duration-ms="764" started-at="2017-03-16T14:31:25Z" finished-at="2017-03-16T14:31:26Z">
+        <test-method status="PASS" signature="testInvalidUsrNmPassWd()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="testInvalidUsrNmPassWd" duration-ms="1026" started-at="2017-03-18T14:36:16Z" finished-at="2017-03-18T14:36:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidUsrNmPassWd -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="cleanUp" is-config="true" duration-ms="800" started-at="2017-03-16T14:31:26Z" finished-at="2017-03-16T14:31:27Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="getResult" is-config="true" duration-ms="973" started-at="2017-03-18T14:36:17Z" finished-at="2017-03-18T14:36:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidUsrNmPassWd status=SUCCESS method=MyTest.testInvalidUsrNmPassWd()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@30c7da1e]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-16T14:31:27Z" finished-at="2017-03-16T14:31:27Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="endReport" is-config="true" duration-ms="372" started-at="2017-03-18T14:36:18Z" finished-at="2017-03-18T14:36:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.MyTest@6442b0a6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-18T14:36:18Z" finished-at="2017-03-18T14:36:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
