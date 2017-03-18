@@ -116,8 +116,9 @@ public class MyTest {
 		loginPage.login("Username", "invalidPassword");
 		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
 		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);
-
-		isPasswordinMsg = false;
+		
+		/* Uncomment this to simulate a failure */
+		//isPasswordinMsg = false;
 
 		Assert.assertTrue(isPasswordinMsg, "Correct message is not displayed for incorrect password");
 		test.log(LogStatus.PASS, "Correct message is displayed for incorrect password");
