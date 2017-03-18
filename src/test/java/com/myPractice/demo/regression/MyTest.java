@@ -1,15 +1,19 @@
 package com.myPractice.demo.regression;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.myPractice.demo.Base;
@@ -17,6 +21,10 @@ import com.myPractice.demo.page.AboutPage;
 import com.myPractice.demo.page.CreateAccountPage;
 import com.myPractice.demo.page.ForgotPasswordPage;
 import com.myPractice.demo.page.LoginPage;
+import com.myPractice.demo.utilClasses.Screenshot;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 /**
  * Login Test Class
@@ -31,6 +39,10 @@ import com.myPractice.demo.page.LoginPage;
  */
 
 public class MyTest {
+
+	ExtentReports extent;
+	ExtentTest test;
+	WebDriver driver;
 
 	public WebDriver d = null;
 	String baseURL = "";
@@ -49,22 +61,28 @@ public class MyTest {
 		}
 	}
 
+	@BeforeTest
+	public void init() {
+
+		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentScreenshot.html");
+	}
+
+	@AfterTest
+	public void endReport() {
+
+		extent.flush();
+		extent.close();
+	}
+
 	@BeforeMethod
 	void setUp() {
 
-		d = b.getDriver("Chrome");		
+		d = b.getDriver("Chrome");
 		d.get(baseURL);
 		d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 
 	}
 
-	@AfterMethod
-	protected void cleanUp() {
-
-		if (d != null) {
-			d.quit();
-		}
-	}
 
 	@Test
 	public void test01() {
@@ -86,6 +104,9 @@ public class MyTest {
 
 	public void testInvalidPassword() {
 
+		test = extent.startTest("testInvalidPassword");
+		System.out.println("Time test started: " + test.getStartedTime());
+
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 
 		String errorMessageString = "";
@@ -95,7 +116,28 @@ public class MyTest {
 		loginPage.login("Username", "invalidPassword");
 		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
 		isPasswordinMsg = StringUtils.containsIgnoreCase(errorMessageString, badPasswordString);
+
+		isPasswordinMsg = false;
+
 		Assert.assertTrue(isPasswordinMsg, "Correct message is not displayed for incorrect password");
+		test.log(LogStatus.PASS, "Correct message is displayed for incorrect password");
+	}
+
+	@AfterMethod
+	public void getResult(ITestResult result) throws IOException {
+
+		if (result.getStatus() == ITestResult.FAILURE) {
+
+			String screenshotPath = Screenshot.capture(d, "screenshot");
+			test.log(LogStatus.FAIL, result.getThrowable());
+			test.log(LogStatus.FAIL, "Screenshot Below: " + test.addScreenCapture(screenshotPath));		
+			System.out.println(screenshotPath);
+		}
+		
+		if (d != null) {
+			d.quit();
+		}
+		extent.endTest(test);
 	}
 
 	@Test
