@@ -53,11 +53,13 @@ public class LoginPage {
 
 	/** Methods */
 
-	public void login(String sUserName, String sPassword) {
+	public LeaguePage login(String sUserName, String sPassword) {
 
 		txtbx_UserName.sendKeys(sUserName);
 		txtbx_Password.sendKeys(sPassword);
 		btn_Login.click();
+		
+		return PageFactory.initElements(driver, LeaguePage.class);
 	}
 
 	public WebElement getBadNamePassWordMsg() {

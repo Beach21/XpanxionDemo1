@@ -5,8 +5,8 @@
 		<parameter name="name" value="paramName1" />
 		<parameter name="password" value="paramPassword1" />
 		<classes>
-			<class name="com.myPractice.demo.regression.MyTest">
+			<class name="com.myPractice.demo.regression.loginTests.MyTest">
 			</class>
 		</classes>
-	</test>
+	</test>	
 </suite>

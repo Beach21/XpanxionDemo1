@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <test name="testParamInvalidUsrNmPassWd(failed)">
+    <parameter name="password" value="paramPassword1"/>
+    <parameter name="name" value="paramName1"/>
+    <classes>
+      <class name="com.myPractice.demo.regression.loginTests.MyTest">
+        <methods>
+          <include name="testInvalidUsrNmPassWd"/>
+          <include name="endReport"/>
+          <include name="init"/>
+          <include name="getResult"/>
+          <include name="testInvalidPassword"/>
+          <include name="suiteSetUp"/>
+          <include name="setUp"/>
+          <include name="suiteCleanUp"/>
+          <include name="testDataProviderInvalidUsrNmPassWd"/>
+          <include name="testValidUserNamePasswd"/>
+          <include name="testBlankUserName"/>
+          <include name="testParamInvalidUsrNmPassWd"/>
+        </methods>
+      </class> <!-- com.myPractice.demo.regression.loginTests.MyTest -->
+    </classes>
+  </test> <!-- testParamInvalidUsrNmPassWd(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

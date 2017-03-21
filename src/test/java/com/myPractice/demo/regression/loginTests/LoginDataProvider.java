@@ -18,11 +18,18 @@ public class LoginDataProvider {
 
 	@DataProvider(name = "SearchProvider")
 	public static Object[][] getDataFromDataprovider() {
+		return new Object[][] {
+
+				{ "username1", "password1" }, { "uname", "pword" }, { "UserName", "Password" } };
+	}
+
+	@DataProvider(name = "ValidNamesProvider")
+	public static Object[][] getValidNamesFromDataprovider() {
 		return new Object[][] { 
 			
-			{ "username1", "password1" },
-			{ "uname", "pword" },
-			{ "UserName", "Password" } 
+			{ "himkes@gmail.com", "pinku" },
+			{ "himkes1@gmail.com", "pinku1" },
+			{ "himkes4@gmail.com", "pinku4" } 
 		};
 	}
 }

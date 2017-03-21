@@ -21,6 +21,7 @@ import com.myPractice.demo.Base;
 import com.myPractice.demo.page.AboutPage;
 import com.myPractice.demo.page.CreateAccountPage;
 import com.myPractice.demo.page.ForgotPasswordPage;
+import com.myPractice.demo.page.LeaguePage;
 import com.myPractice.demo.page.LoginPage;
 import com.myPractice.demo.utilClasses.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
@@ -84,20 +85,20 @@ public class MyTest {
 
 	}
 
-	@Test
-	public void test01() {
+	/* Testing with data provider */
+
+	@Test(dataProvider = "ValidNamesProvider", dataProviderClass = LoginDataProvider.class)
+
+	public void testValidUserNamePasswd(String validName, String validPassword) throws InterruptedException {
 
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		LeaguePage lp = null;
 
-		String errorMessageString = "";
-		String badUserNameString = "User";
-		boolean isUserNameinMsg = true;
+		boolean isLeaguePageLoaded = false;
+		lp = loginPage.login(validName, validPassword);
+		isLeaguePageLoaded = lp.isLeaguePage(d);
 
-		loginPage.login("invalidUserName", "password");
-		errorMessageString = loginPage.getBadNamePassWordMsg().getText();
-		isUserNameinMsg = StringUtils.containsIgnoreCase(errorMessageString, badUserNameString);
-		Assert.assertTrue(isUserNameinMsg, "Correct message not displayed for invalid user name");
-
+		Assert.assertTrue(isLeaguePageLoaded, "League page not loaded");
 	}
 
 	@Test
@@ -284,6 +285,18 @@ public class MyTest {
 		isForgotPasswordPageLoaded = fp.isForgotPasswordPageLoaded();
 
 		Assert.assertTrue(isForgotPasswordPageLoaded, "Create Account page not loaded");
+	}
+	
+	/* Create Account page tests */
+
+	@Test
+
+	public void testCreateAccount() {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);		
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.createRandAccountStep1();
+		
 	}
 
 }
