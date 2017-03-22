@@ -20,6 +20,8 @@ import org.testng.annotations.Test;
 import com.myPractice.demo.Base;
 import com.myPractice.demo.page.AboutPage;
 import com.myPractice.demo.page.CreateAccountPage;
+import com.myPractice.demo.page.CreateAccountPageStep2;
+import com.myPractice.demo.page.CreateAccountPageStep3;
 import com.myPractice.demo.page.ForgotPasswordPage;
 import com.myPractice.demo.page.LeaguePage;
 import com.myPractice.demo.page.LoginPage;
@@ -279,24 +281,31 @@ public class MyTest {
 
 	public void testAccessForgotPasswordPg() {
 
-		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 		boolean isForgotPasswordPageLoaded = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 		ForgotPasswordPage fp = loginPage.clickLnkResetPassword();
 		isForgotPasswordPageLoaded = fp.isForgotPasswordPageLoaded();
 
 		Assert.assertTrue(isForgotPasswordPageLoaded, "Create Account page not loaded");
 	}
-	
+
 	/* Create Account page tests */
 
 	@Test
 
 	public void testCreateAccount() {
 
-		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);		
+		boolean isAccountCreated = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 		CreateAccountPage ca = loginPage.createAccount();
-		ca.createRandAccountStep1();
-		
+		CreateAccountPageStep2 ca2 = ca.createRandAccountStep1();
+		CreateAccountPageStep3 ca3 = ca2.createRandAccountStep2();
+		LoginPage lpAfterAccountCreation = ca3.createRandAccountStep3();
+		isAccountCreated = lpAfterAccountCreation.isAccountCreated();
+
+		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 	}
 
 }

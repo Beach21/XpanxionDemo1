@@ -8,13 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
 /**
  * Create Account Page Object.
  * 
  * <P>
- * User comes here before any other page
+ * User comes here from the login page when the user clicks on "Create Account" link
  * <P>
  * Suitable locators, methods associated with this Page Object defined here
  * 
@@ -99,15 +98,16 @@ public class CreateAccountPage {
 		}
 	}
 
-	public void createRandAccountStep1() {
+	public CreateAccountPageStep2 createRandAccountStep1() {
 
 		fillFirstName();
 		fillLastName();
 		fillEmail();
 		fillGender();
 		fillPlayerType();
-		clickNextButton();	
+		clickNextButton();
 		
+		return PageFactory.initElements(driver, CreateAccountPageStep2.class);		
 	}
 
 	public void fillFirstName() {

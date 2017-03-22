@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="10" total="20" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15103" started-at="2017-03-21T19:44:12Z" finished-at="2017-03-21T19:44:27Z">
+  <suite name="Default suite" duration-ms="173178" started-at="2017-03-22T04:30:48Z" finished-at="2017-03-22T04:33:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15103" started-at="2017-03-21T19:44:12Z" finished-at="2017-03-21T19:44:27Z">
+    <test name="Default test" duration-ms="173178" started-at="2017-03-22T04:30:48Z" finished-at="2017-03-22T04:33:41Z">
       <class name="com.myPractice.demo.regression.loginTests.MyTest">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteSetUp" is-config="true" duration-ms="18" started-at="2017-03-21T15:44:12Z" finished-at="2017-03-21T15:44:12Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteSetUp" is-config="true" duration-ms="16" started-at="2017-03-22T00:30:48Z" finished-at="2017-03-22T00:30:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="init" is-config="true" duration-ms="337" started-at="2017-03-21T15:44:12Z" finished-at="2017-03-21T15:44:13Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="init" is-config="true" duration-ms="281" started-at="2017-03-22T00:30:48Z" finished-at="2017-03-22T00:30:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="7249" started-at="2017-03-21T15:44:13Z" finished-at="2017-03-21T15:44:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="6380" started-at="2017-03-22T00:30:48Z" finished-at="2017-03-22T00:30:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="4371" started-at="2017-03-21T15:44:20Z" finished-at="2017-03-21T15:44:24Z">
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="11630" started-at="2017-03-22T00:30:55Z" finished-at="2017-03-22T00:31:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCreateAccount -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1916" started-at="2017-03-21T15:44:24Z" finished-at="2017-03-21T15:44:26Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1594" started-at="2017-03-22T00:31:06Z" finished-at="2017-03-22T00:31:08Z">
           <params>
             <param index="0">
               <value>
@@ -34,11 +34,182 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="endReport" is-config="true" duration-ms="1186" started-at="2017-03-21T15:44:26Z" finished-at="2017-03-21T15:44:27Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4612" started-at="2017-03-22T00:31:08Z" finished-at="2017-03-22T00:31:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10981" started-at="2017-03-22T00:31:12Z" finished-at="2017-03-22T00:31:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1401" started-at="2017-03-22T00:31:23Z" finished-at="2017-03-22T00:31:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4915" started-at="2017-03-22T00:31:25Z" finished-at="2017-03-22T00:31:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10815" started-at="2017-03-22T00:31:30Z" finished-at="2017-03-22T00:31:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1425" started-at="2017-03-22T00:31:41Z" finished-at="2017-03-22T00:31:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4790" started-at="2017-03-22T00:31:42Z" finished-at="2017-03-22T00:31:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="11753" started-at="2017-03-22T00:31:47Z" finished-at="2017-03-22T00:31:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1398" started-at="2017-03-22T00:31:59Z" finished-at="2017-03-22T00:32:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4916" started-at="2017-03-22T00:32:00Z" finished-at="2017-03-22T00:32:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="11587" started-at="2017-03-22T00:32:05Z" finished-at="2017-03-22T00:32:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1393" started-at="2017-03-22T00:32:16Z" finished-at="2017-03-22T00:32:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4819" started-at="2017-03-22T00:32:18Z" finished-at="2017-03-22T00:32:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10544" started-at="2017-03-22T00:32:23Z" finished-at="2017-03-22T00:32:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1320" started-at="2017-03-22T00:32:33Z" finished-at="2017-03-22T00:32:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4987" started-at="2017-03-22T00:32:35Z" finished-at="2017-03-22T00:32:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10321" started-at="2017-03-22T00:32:40Z" finished-at="2017-03-22T00:32:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1329" started-at="2017-03-22T00:32:50Z" finished-at="2017-03-22T00:32:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4808" started-at="2017-03-22T00:32:51Z" finished-at="2017-03-22T00:32:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10286" started-at="2017-03-22T00:32:56Z" finished-at="2017-03-22T00:33:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1349" started-at="2017-03-22T00:33:06Z" finished-at="2017-03-22T00:33:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4824" started-at="2017-03-22T00:33:08Z" finished-at="2017-03-22T00:33:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10149" started-at="2017-03-22T00:33:12Z" finished-at="2017-03-22T00:33:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1327" started-at="2017-03-22T00:33:23Z" finished-at="2017-03-22T00:33:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4734" started-at="2017-03-22T00:33:24Z" finished-at="2017-03-22T00:33:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testCreateAccount" duration-ms="10131" started-at="2017-03-22T00:33:29Z" finished-at="2017-03-22T00:33:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateAccount -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="1336" started-at="2017-03-22T00:33:39Z" finished-at="2017-03-22T00:33:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCreateAccount status=SUCCESS method=MyTest.testCreateAccount()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="endReport" is-config="true" duration-ms="984" started-at="2017-03-22T00:33:40Z" finished-at="2017-03-22T00:33:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-21T15:44:27Z" finished-at="2017-03-21T15:44:27Z">
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-22T00:33:41Z" finished-at="2017-03-22T00:33:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->

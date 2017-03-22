@@ -45,6 +45,9 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//div[contains(@class, 'err')]")
 	public WebElement div_ErrMsg_MssngNamePassword;
 
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Succesfully')]")
+	public WebElement div_SuccessfullyCreatedAccount;
+
 	/** Constructor */
 	public LoginPage(WebDriver driver) {
 
@@ -58,8 +61,26 @@ public class LoginPage {
 		txtbx_UserName.sendKeys(sUserName);
 		txtbx_Password.sendKeys(sPassword);
 		btn_Login.click();
-		
+
 		return PageFactory.initElements(driver, LeaguePage.class);
+	}
+
+	/*
+	 * Checks if div "Successfully Created Account" is visible on the page and
+	 * indirectly that new account is created successfully
+	 */
+	public boolean isAccountCreated() {
+
+		boolean isDivSuccessfullyCreatedAccountPresent = false;
+		WebElement bn = div_SuccessfullyCreatedAccount;
+
+		System.out.println(bn.getText());
+
+		if (bn != null) {
+			isDivSuccessfullyCreatedAccountPresent = true;
+		}
+
+		return isDivSuccessfullyCreatedAccountPresent;
 	}
 
 	public WebElement getBadNamePassWordMsg() {
