@@ -47,6 +47,9 @@ public class LoginPage {
 
 	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Succesfully')]")
 	public WebElement div_SuccessfullyCreatedAccount;
+	
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Password Updated')]")
+	public WebElement div_PasswordUpdated;
 
 	/** Constructor */
 	public LoginPage(WebDriver driver) {
@@ -81,6 +84,24 @@ public class LoginPage {
 		}
 
 		return isDivSuccessfullyCreatedAccountPresent;
+	}
+	
+	/*
+	 * Checks if div "Password Updated" is visible on the page and
+	 * indirectly that password is updated successfully
+	 */
+	public boolean isPasswordUpdated() {
+
+		boolean isDivPasswordUpdatedPresent = false;
+		WebElement bn = div_PasswordUpdated;
+
+		System.out.println(bn.getText());
+
+		if (bn != null) {
+			isDivPasswordUpdatedPresent = true;
+		}
+
+		return isDivPasswordUpdatedPresent;
 	}
 
 	public WebElement getBadNamePassWordMsg() {

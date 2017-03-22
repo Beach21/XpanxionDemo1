@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -25,6 +26,7 @@ import com.myPractice.demo.page.CreateAccountPageStep3;
 import com.myPractice.demo.page.ForgotPasswordPage;
 import com.myPractice.demo.page.LeaguePage;
 import com.myPractice.demo.page.LoginPage;
+import com.myPractice.demo.page.ResetPasswordPage;
 import com.myPractice.demo.utilClasses.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -127,6 +129,7 @@ public class MyTest {
 		test.log(LogStatus.PASS, "Correct message is displayed for incorrect password");
 	}
 
+	
 	@AfterMethod
 	public void getResult(ITestResult result) throws IOException {
 
@@ -143,6 +146,7 @@ public class MyTest {
 		}
 		extent.endTest(test);
 	}
+	
 
 	@Test
 
@@ -307,5 +311,23 @@ public class MyTest {
 
 		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 	}
+	
+	/* Forgot Password page tests */
+
+	@Test
+
+	public void testPasswordChanged() {
+
+		boolean isPasswordChanged = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		ForgotPasswordPage fp = loginPage.clickLnkResetPassword();		
+		ResetPasswordPage rp = fp.resetPasswordStep1();			
+		//LoginPage lpAfterPasswordReset = rp.resetPasswordStep2();		
+		//isPasswordChanged = lpAfterPasswordReset.isPasswordUpdated();		
+
+		Assert.assertTrue(isPasswordChanged, "Password not changed successfully");
+	}
+
 
 }

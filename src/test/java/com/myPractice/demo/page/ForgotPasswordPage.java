@@ -1,9 +1,13 @@
 package com.myPractice.demo.page;
 
+import java.util.List;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Forgot Password Page Object
@@ -23,8 +27,21 @@ public class ForgotPasswordPage {
 	final WebDriver driver;
 
 	/** Locators */
+	
+	@FindBy(how = How.ID, using = "email_id")
+	public WebElement txtBx_EmailID;
+	
 	@FindBy(how = How.ID, using = "SecurityQuestionID")
 	public WebElement drpDwn_SecurityQuestion;
+	
+	@FindBy(how = How.XPATH, using = "//Select[@id='SecurityQuestionID']/option")
+	public List<WebElement> securityQuestions;	
+	
+	@FindBy(how = How.ID, using = "SecurityQuestionAnswer")
+	public WebElement txtBx_SecurityQuestionAnswer;
+	
+	@FindBy(how = How.ID, using = "btn_Submit")
+	public WebElement btn_Go;
 
 	/** Constructor */
 	public ForgotPasswordPage(WebDriver driver) {
@@ -37,6 +54,33 @@ public class ForgotPasswordPage {
 
 		return driver.getCurrentUrl();
 	}
+	
+	public WebElement getTxtBxUserName() {
+
+		return txtBx_EmailID;
+	}
+	
+	WebElement getDrpdwnSecurityQuestion() {
+
+		return drpDwn_SecurityQuestion;
+	}
+	
+	List<WebElement> getSecurityQuestions() {
+
+		return securityQuestions;
+	}
+
+
+	WebElement getTxtBxAnswer() {
+
+		return txtBx_SecurityQuestionAnswer;
+	}
+	
+	WebElement getBtnGo() {
+
+		return btn_Go;
+	}
+
 
 	// Checks if the navigation to the page is correct
 
@@ -73,5 +117,44 @@ public class ForgotPasswordPage {
 
 		return isSecQuestnDDPresent;
 	}
+	
+	public ResetPasswordPage resetPasswordStep1() {
+
+		fillUserName();
+		fillSecurityQuestion();		
+		fillAnswer();		
+		clickBtnGo();
+
+		return PageFactory.initElements(driver, ResetPasswordPage.class);
+
+	}
+
+	public void fillUserName() {
+
+		WebElement fp = getTxtBxUserName();
+		fp.sendKeys("himkes@gmail.com");		
+	}
+	
+	public void fillSecurityQuestion() {
+
+		WebElement sq = getDrpdwnSecurityQuestion();
+		sq.click();	
+		List<WebElement> sq1 = getSecurityQuestions();
+		sq1.get(1).click();
+	}
+	
+	public void fillAnswer() {
+
+		WebElement fp = getTxtBxAnswer();
+		fp.sendKeys("pinku");
+		fp.sendKeys(Keys.RETURN);
+	}
+	
+	public void clickBtnGo() {
+
+		WebElement fp = btn_Go;
+		fp.click();	
+	}
+
 
 }

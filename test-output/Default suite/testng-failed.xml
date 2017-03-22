@@ -11,7 +11,7 @@
           <include name="suiteSetUp"/>
           <include name="setUp"/>
           <include name="suiteCleanUp"/>
-          <include name="testCreateAccount"/>
+          <include name="testPasswordChanged"/>
         </methods>
       </class> <!-- com.myPractice.demo.regression.loginTests.MyTest -->
     </classes>
