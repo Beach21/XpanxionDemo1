@@ -36,6 +36,9 @@ public class ResetPasswordPage {
 	@FindBy(how = How.ID, using = "btn_Submit")
 	public WebElement btn_ChangePassword;
 
+	@FindBy(how = How.NAME, using = "btn-login")
+	public WebElement btn_ChangePassword1;
+	
 	/** Constructor */
 	public ResetPasswordPage(WebDriver driver) {
 
@@ -60,7 +63,7 @@ public class ResetPasswordPage {
 
 	WebElement getBtnChangePassword() {
 
-		return btn_ChangePassword;
+		return btn_ChangePassword1;
 	}
 
 	// Checks if the navigation to the page is correct

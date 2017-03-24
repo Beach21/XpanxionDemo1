@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.myPractice.demo.regression.loginTests.MyTest">
+      <class name="com.myPractice.demo.regression.loginTests.LoginTests">
         <methods>
-          <include name="endReport"/>
-          <include name="init"/>
-          <include name="getResult"/>
           <include name="suiteSetUp"/>
           <include name="setUp"/>
+          <include name="getResult"/>
+          <include name="init"/>
+          <include name="endReport"/>
+          <include name="testXMLValidUserNamePasswd"/>
           <include name="suiteCleanUp"/>
-          <include name="testPasswordChanged"/>
         </methods>
-      </class> <!-- com.myPractice.demo.regression.loginTests.MyTest -->
+      </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,22 +5,18 @@
     <parameter name="password" value="paramPassword1"/>
     <parameter name="name" value="paramName1"/>
     <classes>
-      <class name="com.myPractice.demo.regression.loginTests.MyTest">
+      <class name="com.myPractice.demo.regression.loginTests.LoginTests">
         <methods>
-          <include name="testInvalidUsrNmPassWd"/>
-          <include name="endReport"/>
-          <include name="init"/>
-          <include name="getResult"/>
-          <include name="testInvalidPassword"/>
           <include name="suiteSetUp"/>
           <include name="setUp"/>
-          <include name="suiteCleanUp"/>
-          <include name="testDataProviderInvalidUsrNmPassWd"/>
+          <include name="getResult"/>
+          <include name="testPasswordChanged"/>
+          <include name="init"/>
           <include name="testValidUserNamePasswd"/>
-          <include name="testBlankUserName"/>
-          <include name="testParamInvalidUsrNmPassWd"/>
+          <include name="endReport"/>
+          <include name="suiteCleanUp"/>
         </methods>
-      </class> <!-- com.myPractice.demo.regression.loginTests.MyTest -->
+      </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->
     </classes>
   </test> <!-- testParamInvalidUsrNmPassWd(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

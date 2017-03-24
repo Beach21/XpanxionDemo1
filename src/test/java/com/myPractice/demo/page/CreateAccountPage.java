@@ -13,7 +13,8 @@ import org.openqa.selenium.support.PageFactory;
  * Create Account Page Object.
  * 
  * <P>
- * User comes here from the login page when the user clicks on "Create Account" link
+ * User comes here from the login page when the user clicks on "Create Account"
+ * link
  * <P>
  * Suitable locators, methods associated with this Page Object defined here
  * 
@@ -92,7 +93,7 @@ public class CreateAccountPage {
 	public void clickNextButton() {
 
 		try {
-			btn_Next.click();			
+			btn_Next.click();
 		} catch (Exception e) {
 			e.getMessage();
 		}
@@ -106,13 +107,30 @@ public class CreateAccountPage {
 		fillGender();
 		fillPlayerType();
 		clickNextButton();
-		
-		return PageFactory.initElements(driver, CreateAccountPageStep2.class);		
+
+		return PageFactory.initElements(driver, CreateAccountPageStep2.class);
 	}
 
+	public CreateAccountPageStep2 createAccountStep1(String firstName, String lastName, String email, int gender , int playerType) {
+
+		fillFirstName(firstName);
+		fillLastName(lastName);
+		fillEmail(email);
+		fillGender(gender);
+		fillPlayerType(playerType);
+		clickNextButton();
+
+		return PageFactory.initElements(driver, CreateAccountPageStep2.class);
+	}
+	
 	public void fillFirstName() {
 
 		txtbx_FirstName.sendKeys(getRndFirstName());
+	}
+
+	public void fillFirstName(String firstName) {
+
+		txtbx_FirstName.sendKeys(firstName);
 	}
 
 	public void fillLastName() {
@@ -120,9 +138,19 @@ public class CreateAccountPage {
 		txtbx_LastName.sendKeys(getRndLastName());
 	}
 
+	public void fillLastName(String lastName) {
+
+		txtbx_LastName.sendKeys(lastName);
+	}
+
 	public void fillEmail() {
 
 		txtbx_Email.sendKeys(getRndEmail());
+	}
+
+	public void fillEmail(String email) {
+
+		txtbx_Email.sendKeys(email);
 	}
 
 	public void fillGender() {
@@ -132,10 +160,24 @@ public class CreateAccountPage {
 
 	}
 
+	public void fillGender(int i) {
+
+		ul_Gender.click();
+		ul_GenderList.get(i).click();
+
+	}
+
 	public void fillPlayerType() {
 
 		drpDwn_PlayerType.click();
 		ul_PlayerList.get(2).click();
+
+	}
+
+	public void fillPlayerType(int i) {
+
+		drpDwn_PlayerType.click();
+		ul_PlayerList.get(i).click();
 
 	}
 

@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -27,6 +26,7 @@ import com.myPractice.demo.page.ForgotPasswordPage;
 import com.myPractice.demo.page.LeaguePage;
 import com.myPractice.demo.page.LoginPage;
 import com.myPractice.demo.page.ResetPasswordPage;
+import com.myPractice.demo.utilClasses.ReadXMLData;
 import com.myPractice.demo.utilClasses.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -48,7 +48,12 @@ public class LoginTests {
 
 	ExtentReports extent;
 	ExtentTest test;
-	WebDriver driver;
+
+	ReadXMLData readXml = new ReadXMLData(
+			"\\myPractice\\src\\test\\java\\com\\myPractice\\demo\\regression//loginTests//TestData.xml");
+	// TODO
+	// String xmlUserName = readXml.getData("data.UserName");
+	// String xmlPassword = readXml.getData("data.Password");
 
 	public WebDriver d = null;
 	String baseURL = "";
@@ -85,7 +90,7 @@ public class LoginTests {
 
 		d = b.getDriver("Chrome");
 		d.get(baseURL);
-		d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		// d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
 
 	}
 
@@ -129,15 +134,15 @@ public class LoginTests {
 		test.log(LogStatus.PASS, "Correct message is displayed for incorrect password");
 	}
 
-	
 	@AfterMethod
 	public void getResult(ITestResult result) throws IOException {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
 
 			String screenshotPath = Screenshot.capture(d, "screenshot");
-			test.log(LogStatus.FAIL, result.getThrowable());
-			test.log(LogStatus.FAIL, "Screenshot Below: " + test.addScreenCapture(screenshotPath));
+			// test.log(LogStatus.FAIL, result.getThrowable());
+			// test.log(LogStatus.FAIL, "Screenshot Below: " +
+			// test.addScreenCapture(screenshotPath));
 			System.out.println(screenshotPath);
 		}
 
@@ -146,7 +151,6 @@ public class LoginTests {
 		}
 		extent.endTest(test);
 	}
-	
 
 	@Test
 
@@ -298,7 +302,7 @@ public class LoginTests {
 
 	@Test
 
-	public void testCreateAccount() {
+	public void testRandCreateAccount() {
 
 		boolean isAccountCreated = false;
 
@@ -311,7 +315,28 @@ public class LoginTests {
 
 		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 	}
-	
+
+	@Test
+
+	public void testCreateAccount() {
+
+		boolean isAccountCreated = false;
+
+		try {
+			LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+			CreateAccountPage ca = loginPage.createAccount();
+			CreateAccountPageStep2 ca2 = ca.createAccountStep1("himanshu", "keskar", "himanshu.keskar@gmail.com", 2, 2);
+			CreateAccountPageStep3 ca3 = ca2.createRandAccountStep2();
+			LoginPage lpAfterAccountCreation = ca3.createRandAccountStep3();
+			isAccountCreated = lpAfterAccountCreation.isAccountCreated();
+			Assert.assertTrue(isAccountCreated, "Account not created successfully");
+		} finally {
+			d.quit();
+			System.exit(0);
+		}
+
+	}
+
 	/* Forgot Password page tests */
 
 	@Test
@@ -320,14 +345,38 @@ public class LoginTests {
 
 		boolean isPasswordChanged = false;
 
-		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-		ForgotPasswordPage fp = loginPage.clickLnkResetPassword();		
-		ResetPasswordPage rp = fp.resetPasswordStep1();			
-		LoginPage lpAfterPasswordReset = rp.resetPasswordStep2();		
-		isPasswordChanged = lpAfterPasswordReset.isPasswordUpdated();		
-
-		Assert.assertTrue(isPasswordChanged, "Password not changed successfully");
+		try {
+			LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+			ForgotPasswordPage fp = loginPage.clickLnkResetPassword();
+			ResetPasswordPage rp = fp.resetPasswordStep1();
+			LoginPage lpAfterPasswordReset = rp.resetPasswordStep2();
+			isPasswordChanged = lpAfterPasswordReset.isPasswordUpdated();
+			Assert.assertTrue(isPasswordChanged, "Password not changed successfully");
+		} finally {
+			// driver.quit();
+		}
 	}
 
+	// TODO
+
+	/* Testing with data from XML file */
+
+	/*
+	 * 
+	 * @Test
+	 * 
+	 * public void testXMLValidUserNamePasswd(){
+	 * 
+	 * //System.out.println(xmlUserName); //System.out.println(xmlPassword);
+	 * 
+	 * LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+	 * LeaguePage lp = null;
+	 * 
+	 * boolean isLeaguePageLoaded = false; lp = loginPage.login("a", "b");
+	 * isLeaguePageLoaded = lp.isLeaguePage(d);
+	 * 
+	 * Assert.assertTrue(isLeaguePageLoaded, "League page not loaded"); }
+	 * 
+	 */
 
 }

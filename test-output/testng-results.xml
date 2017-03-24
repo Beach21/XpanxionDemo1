@@ -1,37 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="11" total="12" passed="0">
+<testng-results skipped="0" failed="1" ignored="13" total="14" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14407" started-at="2017-03-24T14:46:37Z" finished-at="2017-03-24T14:46:51Z">
+  <suite name="Default suite" duration-ms="5073" started-at="2017-03-24T18:30:47Z" finished-at="2017-03-24T18:30:52Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14407" started-at="2017-03-24T14:46:37Z" finished-at="2017-03-24T14:46:51Z">
-      <class name="com.myPractice.demo.regression.loginTests.MyTest">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteSetUp" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="init" is-config="true" duration-ms="125" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:37Z">
+    <test name="Default test" duration-ms="5073" started-at="2017-03-24T18:30:47Z" finished-at="2017-03-24T18:30:52Z">
+      <class name="com.myPractice.demo.regression.loginTests.LoginTests">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="init" is-config="true" duration-ms="125" started-at="2017-03-24T14:30:47Z" finished-at="2017-03-24T14:30:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="5309" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:42Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="suiteSetUp" is-config="true" duration-ms="0" started-at="2017-03-24T14:30:47Z" finished-at="2017-03-24T14:30:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="setUp" is-config="true" duration-ms="4847" started-at="2017-03-24T14:30:47Z" finished-at="2017-03-24T14:30:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testPasswordChanged()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testPasswordChanged" duration-ms="8895" started-at="2017-03-24T10:46:42Z" finished-at="2017-03-24T10:46:51Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="testXMLValidUserNamePasswd()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="testXMLValidUserNamePasswd" duration-ms="38" started-at="2017-03-24T14:30:52Z" finished-at="2017-03-24T14:30:52Z">
+          <exception class="org.openqa.selenium.NoSuchWindowException">
+            <message>
+              <![CDATA[no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir1988_4440}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 766c255a8dbc5e86e92627e84ceed6f8
+*** Element info: {Using=id, value=username}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy12.click(Unknown Source)
-	at com.myPractice.demo.page.ForgotPasswordPage.clickBtnGo(ForgotPasswordPage.java:156)
-	at com.myPractice.demo.page.ForgotPasswordPage.resetPasswordStep1(ForgotPasswordPage.java:126)
-	at com.myPractice.demo.regression.loginTests.MyTest.testPasswordChanged(MyTest.java:325)
+              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 15 milliseconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir1988_4440}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 766c255a8dbc5e86e92627e84ceed6f8
+*** Element info: {Using=id, value=username}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
+	at com.myPractice.demo.page.LoginPage.login(LoginPage.java:64)
+	at com.myPractice.demo.regression.loginTests.LoginTests.testXMLValidUserNamePasswd(LoginTests.java:108)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -59,15 +89,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPasswordChanged -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="16" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
+        </test-method> <!-- testXMLValidUserNamePasswd -->
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="getResult" is-config="true" duration-ms="16" started-at="2017-03-24T14:30:52Z" finished-at="2017-03-24T14:30:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testPasswordChanged status=FAILURE method=MyTest.testPasswordChanged()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6] output={null}]]]>
+                <![CDATA[[TestResult name=testXMLValidUserNamePasswd status=FAILURE method=LoginTests.testXMLValidUserNamePasswd()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b] output={null}]]]>
               </value>
             </param>
           </params>
@@ -81,8 +111,8 @@ Command duration or timeout: 16 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir10088_6708}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: da4067fabc0a478b23269d58ef7e9318]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir1988_4440}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 766c255a8dbc5e86e92627e84ceed6f8]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
@@ -93,8 +123,8 @@ Command duration or timeout: 16 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir10088_6708}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: da4067fabc0a478b23269d58ef7e9318
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir1988_4440}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 766c255a8dbc5e86e92627e84ceed6f8
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -105,7 +135,7 @@ Session ID: da4067fabc0a478b23269d58ef7e9318
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
 	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:335)
 	at com.myPractice.demo.utilClasses.Screenshot.capture(Screenshot.java:17)
-	at com.myPractice.demo.regression.loginTests.MyTest.getResult(MyTest.java:138)
+	at com.myPractice.demo.regression.loginTests.LoginTests.getResult(LoginTests.java:159)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -139,15 +169,15 @@ Session ID: da4067fabc0a478b23269d58ef7e9318
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="endReport" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
+        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="endReport" is-config="true" duration-ms="0" started-at="2017-03-24T14:30:52Z" finished-at="2017-03-24T14:30:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="SKIP" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
+        <test-method status="SKIP" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@6a4f787b]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-24T14:30:52Z" finished-at="2017-03-24T14:30:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
-      </class> <!-- com.myPractice.demo.regression.loginTests.MyTest -->
+      </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
