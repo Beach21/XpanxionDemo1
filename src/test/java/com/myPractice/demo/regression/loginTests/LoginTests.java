@@ -44,7 +44,7 @@ import com.relevantcodes.extentreports.LogStatus;
  * @version 1.0
  */
 
-public class MyTest {
+public class LoginTests {
 
 	ExtentReports extent;
 	ExtentTest test;
@@ -323,8 +323,8 @@ public class MyTest {
 		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
 		ForgotPasswordPage fp = loginPage.clickLnkResetPassword();		
 		ResetPasswordPage rp = fp.resetPasswordStep1();			
-		//LoginPage lpAfterPasswordReset = rp.resetPasswordStep2();		
-		//isPasswordChanged = lpAfterPasswordReset.isPasswordUpdated();		
+		LoginPage lpAfterPasswordReset = rp.resetPasswordStep2();		
+		isPasswordChanged = lpAfterPasswordReset.isPasswordUpdated();		
 
 		Assert.assertTrue(isPasswordChanged, "Password not changed successfully");
 	}

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="1" ignored="11" total="12" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="23035" started-at="2017-03-22T22:52:48Z" finished-at="2017-03-22T22:53:11Z">
+  <suite name="Default suite" duration-ms="14407" started-at="2017-03-24T14:46:37Z" finished-at="2017-03-24T14:46:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="23035" started-at="2017-03-22T22:52:48Z" finished-at="2017-03-22T22:53:11Z">
+    <test name="Default test" duration-ms="14407" started-at="2017-03-24T14:46:37Z" finished-at="2017-03-24T14:46:51Z">
       <class name="com.myPractice.demo.regression.loginTests.MyTest">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteSetUp" is-config="true" duration-ms="15" started-at="2017-03-22T18:52:48Z" finished-at="2017-03-22T18:52:48Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteSetUp" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="init" is-config="true" duration-ms="125" started-at="2017-03-22T18:52:48Z" finished-at="2017-03-22T18:52:48Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="init" is-config="true" duration-ms="125" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="4989" started-at="2017-03-22T18:52:48Z" finished-at="2017-03-22T18:52:53Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="setUp" is-config="true" duration-ms="5309" started-at="2017-03-24T10:46:37Z" finished-at="2017-03-24T10:46:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testPasswordChanged()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testPasswordChanged" duration-ms="17873" started-at="2017-03-22T18:52:53Z" finished-at="2017-03-22T18:53:11Z">
+        <test-method status="FAIL" signature="testPasswordChanged()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="testPasswordChanged" duration-ms="8895" started-at="2017-03-24T10:46:42Z" finished-at="2017-03-24T10:46:51Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPasswordChanged -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="16" started-at="2017-03-22T18:53:11Z" finished-at="2017-03-22T18:53:11Z">
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="getResult" is-config="true" duration-ms="16" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
           <params>
             <param index="0">
               <value>
@@ -81,8 +81,8 @@ Command duration or timeout: 16 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir12376_19719}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: d6f9fa7cf1766bb56b539700a7f37965]]>
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir10088_6708}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: da4067fabc0a478b23269d58ef7e9318]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
@@ -93,8 +93,8 @@ Command duration or timeout: 16 milliseconds
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-12HBTFV', ip: '192.168.1.192', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_121'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir12376_19719}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: d6f9fa7cf1766bb56b539700a7f37965
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\HIMANS~1\AppData\Local\Temp\scoped_dir10088_6708}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: da4067fabc0a478b23269d58ef7e9318
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -139,11 +139,11 @@ Session ID: d6f9fa7cf1766bb56b539700a7f37965
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="endReport" is-config="true" duration-ms="0" started-at="2017-03-22T18:53:11Z" finished-at="2017-03-22T18:53:11Z">
+        <test-method status="SKIP" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="endReport" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="SKIP" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-22T18:53:11Z" finished-at="2017-03-22T18:53:11Z">
+        <test-method status="SKIP" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.MyTest@6f7fd0e6]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-24T10:46:51Z" finished-at="2017-03-24T10:46:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
