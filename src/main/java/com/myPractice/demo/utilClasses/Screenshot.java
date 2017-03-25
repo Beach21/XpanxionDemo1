@@ -9,6 +9,21 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+
+/**
+ * Read XMl Data
+ * 
+ * <P>
+ * Screenshot.java
+ * 
+ * Has methods that are used to capture screen shots
+ * 
+ * <P>
+ * 
+ * 
+ * @author himanshu.keskar@gmail.com
+ * @version 1.0
+ */
 public class Screenshot {
 
 		public static String capture(WebDriver driver, String screenshotName) throws IOException{

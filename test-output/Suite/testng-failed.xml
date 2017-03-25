@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.myPractice.demo.regression.loginTests.LoginTests">
+        <methods>
+          <include name="suiteSetUp"/>
+          <include name="setUp"/>
+          <include name="testRandCreateAccount"/>
+          <include name="testDataProviderInvalidUsrNmPassWd"/>
+          <include name="testPasswordChanged"/>
+          <include name="testBlankPassword"/>
+          <include name="init"/>
+          <include name="testBlankUserName"/>
+          <include name="endReport"/>
+          <include name="testInvalidPassword"/>
+          <include name="getResult"/>
+          <include name="testCreateAccount"/>
+          <include name="testInvalidUsrNmPassWd"/>
+          <include name="testParamInvalidUsrNmPassWd"/>
+          <include name="testAccessCreateAccountPg"/>
+          <include name="testValidUserNamePasswd"/>
+          <include name="testAccessForgotPasswordPg"/>
+          <include name="suiteCleanUp"/>
+        </methods>
+      </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -16,6 +16,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import com.myPractice.demo.Base;
 import com.myPractice.demo.page.AboutPage;
@@ -26,7 +29,7 @@ import com.myPractice.demo.page.ForgotPasswordPage;
 import com.myPractice.demo.page.LeaguePage;
 import com.myPractice.demo.page.LoginPage;
 import com.myPractice.demo.page.ResetPasswordPage;
-import com.myPractice.demo.utilClasses.ReadXMLData;
+import com.myPractice.demo.utilClasses.ReadNewXmlData;
 import com.myPractice.demo.utilClasses.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -48,15 +51,21 @@ public class LoginTests {
 
 	ExtentReports extent;
 	ExtentTest test;
-
-	ReadXMLData readXml = new ReadXMLData(
-			"\\myPractice\\src\\test\\java\\com\\myPractice\\demo\\regression//loginTests//TestData.xml");
-	// TODO
-	// String xmlUserName = readXml.getData("data.UserName");
-	// String xmlPassword = readXml.getData("data.Password");
-
 	public WebDriver d = null;
 	String baseURL = "";
+
+	/* Used to get data from testData.xml file */
+	String getTestData(String data) {
+		
+		ReadNewXmlData rd = new ReadNewXmlData();
+		Document doc = rd.buildDoc("c:\\Work\\testData.xml");
+		NodeList nl = doc.getElementsByTagName(data);
+		Element fe = (Element)nl.item(0);
+		String fs = fe.getTextContent();
+		
+		return fs;
+	}
+
 	Base b = new Base();
 
 	@BeforeSuite
@@ -90,7 +99,7 @@ public class LoginTests {
 
 		d = b.getDriver("Chrome");
 		d.get(baseURL);
-		// d.manage().timeouts().implicitlyWait(3000, TimeUnit.SECONDS);
+		d.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 
 	}
 
@@ -140,9 +149,9 @@ public class LoginTests {
 		if (result.getStatus() == ITestResult.FAILURE) {
 
 			String screenshotPath = Screenshot.capture(d, "screenshot");
-			// test.log(LogStatus.FAIL, result.getThrowable());
-			// test.log(LogStatus.FAIL, "Screenshot Below: " +
-			// test.addScreenCapture(screenshotPath));
+			test.log(LogStatus.FAIL, result.getThrowable());
+			test.log(LogStatus.FAIL, "Screenshot Below: " +
+			test.addScreenCapture(screenshotPath));
 			System.out.println(screenshotPath);
 		}
 
@@ -300,7 +309,7 @@ public class LoginTests {
 
 	/* Create Account page tests */
 
-	@Test
+	@Test(invocationCount = 5)
 
 	public void testRandCreateAccount() {
 
@@ -316,7 +325,7 @@ public class LoginTests {
 		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 	}
 
-	@Test
+	@Test(enabled=false)
 
 	public void testCreateAccount() {
 
@@ -357,26 +366,21 @@ public class LoginTests {
 		}
 	}
 
-	// TODO
-
 	/* Testing with data from XML file */
 
-	/*
-	 * 
-	 * @Test
-	 * 
-	 * public void testXMLValidUserNamePasswd(){
-	 * 
-	 * //System.out.println(xmlUserName); //System.out.println(xmlPassword);
-	 * 
-	 * LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
-	 * LeaguePage lp = null;
-	 * 
-	 * boolean isLeaguePageLoaded = false; lp = loginPage.login("a", "b");
-	 * isLeaguePageLoaded = lp.isLeaguePage(d);
-	 * 
-	 * Assert.assertTrue(isLeaguePageLoaded, "League page not loaded"); }
-	 * 
-	 */
+	@Test
+
+	public void testXMLValidUserNamePasswd() {
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		LeaguePage lp = null;
+
+		boolean isLeaguePageLoaded = false;
+		lp = loginPage.login(getTestData("name"), getTestData("password"));
+		isLeaguePageLoaded = lp.isLeaguePage(d);
+
+		Assert.assertTrue(isLeaguePageLoaded, "League page not loaded");
+		
+	}
 
 }
