@@ -63,6 +63,21 @@ public class CreateAccountPage {
 	@FindBy(how = How.XPATH, using = "//li[contains(@class, 'select')]")
 	public List<WebElement> ul_PlayerList;
 
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'PlayerFirstName')]")
+	public WebElement err_PlayerFirstName;
+
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'PlayerLastName')]")
+	public WebElement err_PlayerLastName;
+
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'email field')]")
+	public WebElement err_Email;
+
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'GenderID ')]")
+	public WebElement err_Gender;
+
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'PlayerTypeID ')]")
+	public WebElement err_PlayerType;
+
 	/** Constructor */
 
 	public CreateAccountPage(WebDriver driver) {
@@ -111,7 +126,8 @@ public class CreateAccountPage {
 		return PageFactory.initElements(driver, CreateAccountPageStep2.class);
 	}
 
-	public CreateAccountPageStep2 createAccountStep1(String firstName, String lastName, String email, int gender , int playerType) {
+	public CreateAccountPageStep2 createAccountStep1(String firstName, String lastName, String email, int gender,
+			int playerType) {
 
 		fillFirstName(firstName);
 		fillLastName(lastName);
@@ -122,7 +138,7 @@ public class CreateAccountPage {
 
 		return PageFactory.initElements(driver, CreateAccountPageStep2.class);
 	}
-	
+
 	public void fillFirstName() {
 
 		txtbx_FirstName.sendKeys(getRndFirstName());
@@ -206,6 +222,52 @@ public class CreateAccountPage {
 	public String getRndEmail() {
 
 		return getRndString("LN") + "@hotmail.com";
+
+	}
+
+	public boolean isFNErrorMessage() {
+
+		if (err_PlayerFirstName.isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean isLNErrorMessage() {
+
+		if (err_PlayerLastName.isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean isEmailErrorMessage() {
+
+		if (err_Email.isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean isGenderErrorMessage() {
+
+		if (err_Gender.isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public boolean isPlayerTypeMessage() {
+
+		if (err_PlayerType.isDisplayed()) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
 

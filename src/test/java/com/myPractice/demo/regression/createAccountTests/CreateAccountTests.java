@@ -17,7 +17,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.myPractice.demo.Base;
+import com.myPractice.demo.BaseTest;
 import com.myPractice.demo.page.CreateAccountPage;
 import com.myPractice.demo.page.CreateAccountPageStep2;
 import com.myPractice.demo.page.CreateAccountPageStep3;
@@ -40,7 +40,7 @@ import com.relevantcodes.extentreports.LogStatus;
  * @version 1.0
  */
 
-public class CreateAccountTests {
+public class CreateAccountTests extends BaseTest {
 
 	ExtentReports extent;
 	ExtentTest test;
@@ -48,12 +48,12 @@ public class CreateAccountTests {
 
 	public WebDriver d = null;
 	String baseURL = "";
-	Base b = new Base();
+	BaseTest b = new BaseTest();
 
 	@BeforeSuite
 	void suiteSetUp() {
 
-		baseURL = "https://www.leagueplanit.com";
+		baseURL = super.baseURL;
 	}
 
 	@AfterSuite
@@ -66,7 +66,7 @@ public class CreateAccountTests {
 	@BeforeTest
 	public void init() {
 
-		extent = new ExtentReports(System.getProperty("user.dir") + "/test-output/ExtentScreenshot.html");
+		extent = new ExtentReports(System.getProperty("user.dir") + super.extentScreenshotLocation);
 	}
 
 	@AfterTest
@@ -80,7 +80,7 @@ public class CreateAccountTests {
 	@BeforeMethod
 	void setUp() {
 
-		d = b.getDriver();
+		d = super.getDriver();
 		d.get(baseURL);
 		d.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
@@ -193,7 +193,7 @@ public class CreateAccountTests {
 		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 	}
 
-	@Test
+	@Test(enabled = false)
 
 	public void testCreateAccount() {
 
@@ -208,6 +208,93 @@ public class CreateAccountTests {
 
 		Assert.assertTrue(isAccountCreated, "Account not created successfully");
 
+	}
+
+	/* Invalid tests for create account */
+
+	@Test
+
+	public void testNoFirstNameCA() {
+
+		boolean isCorrectErrMsg = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.fillLastName();
+		ca.fillEmail();
+		ca.fillGender();
+		ca.fillPlayerType();
+		ca.clickNextButton();
+		isCorrectErrMsg = ca.isFNErrorMessage();
+		Assert.assertTrue(isCorrectErrMsg, "Correct error message displayed when 'First Name' field is not filled");
+	}
+
+	@Test
+
+	public void testNoLastNameCA() {
+
+		boolean isCorrectErrMsg = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.fillFirstName();
+		ca.fillEmail();
+		ca.fillGender();
+		ca.fillPlayerType();
+		ca.clickNextButton();
+		isCorrectErrMsg = ca.isLNErrorMessage();
+		Assert.assertTrue(isCorrectErrMsg, "Correct error message displayed when 'Last Name' field is not filled");
+	}
+
+	@Test
+
+	public void testNoEmailNameCA() {
+
+		boolean isCorrectErrMsg = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.fillFirstName();
+		ca.fillLastName();
+		ca.fillGender();
+		ca.fillPlayerType();
+		ca.clickNextButton();
+		isCorrectErrMsg = ca.isEmailErrorMessage();
+		Assert.assertTrue(isCorrectErrMsg, "Correct error message displayed when 'Email' field is not filled");
+	}
+
+	@Test
+
+	public void testNoGenderNameCA() {
+
+		boolean isCorrectErrMsg = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.fillFirstName();
+		ca.fillLastName();
+		ca.fillEmail();
+		ca.fillPlayerType();
+		ca.clickNextButton();
+		isCorrectErrMsg = ca.isGenderErrorMessage();
+		Assert.assertTrue(isCorrectErrMsg, "Correct error message displayed when 'Gender' field is not filled");
+	}
+
+	@Test
+
+	public void testNoPlayerTypeNameCA() {
+
+		boolean isCorrectErrMsg = false;
+
+		LoginPage loginPage = PageFactory.initElements(d, LoginPage.class);
+		CreateAccountPage ca = loginPage.createAccount();
+		ca.fillFirstName();
+		ca.fillLastName();
+		ca.fillEmail();
+		ca.fillGender();
+		ca.clickNextButton();
+		isCorrectErrMsg = ca.isPlayerTypeMessage();
+		Assert.assertTrue(isCorrectErrMsg, "Correct error message displayed when 'Player Type' field is not filled");
 	}
 
 }

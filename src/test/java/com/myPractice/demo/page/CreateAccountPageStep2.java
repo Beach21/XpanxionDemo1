@@ -173,11 +173,23 @@ public class CreateAccountPageStep2 {
 		WebElement fp = getTxtBxPassword();
 		fp.sendKeys("Password");
 	}
+	
+	public void fillPassword(String password) {
+
+		WebElement fp = getTxtBxPassword();
+		fp.sendKeys(password);
+	}
 
 	public void fillConfirmPassword() {
 
 		WebElement fp = getTxtBxConfirmPassword();
 		fp.sendKeys("Password");
+	}
+	
+	public void fillConfirmPassword(String password) {
+
+		WebElement fp = getTxtBxConfirmPassword();
+		fp.sendKeys(password);
 	}
 
 	public void fillSecurityQuestion() {
@@ -188,10 +200,26 @@ public class CreateAccountPageStep2 {
 		sq1.get(2).click();
 	}
 	
+	public void fillSecurityQuestion(int i) {
+
+		WebElement sq = getDrpdwnSecurityQuestion();
+		sq.click();	
+		List<WebElement> sq1 = getSecurityQuestions();
+		sq1.get(i).click();
+	}
+	
 	public void fillAnswer() {
 
 		WebElement fp = getTxtBxAnswer();
 		fp.sendKeys("pinku");
+		List<WebElement> fp1 = getTeams();
+		fp1.get(2).click();
+	}
+	
+	public void fillAnswer(String answer) {
+
+		WebElement fp = getTxtBxAnswer();
+		fp.sendKeys(answer);
 		List<WebElement> fp1 = getTeams();
 		fp1.get(2).click();
 	}
