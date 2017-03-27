@@ -35,7 +35,7 @@ public class BaseTest {
 	protected String configPropertyPath = "/com/myPractice/config.properties";
 	
 	protected String testDataPath = "c:\\Work\\testData1.xml";
-	protected String baseURL = "https://www.leagueplanit.com";
+	protected String baseURL = "https://www.leagueplanit.com/test";
 	protected String extentScreenshotLocation = "/test-output/ExtentScreenshot.html";
 	
 	

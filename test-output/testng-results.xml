@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12400" started-at="2017-03-26T22:11:37Z" finished-at="2017-03-26T22:11:50Z">
+  <suite name="Default suite" duration-ms="8770" started-at="2017-03-26T23:52:02Z" finished-at="2017-03-26T23:52:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12400" started-at="2017-03-26T22:11:37Z" finished-at="2017-03-26T22:11:50Z">
+    <test name="Default test" duration-ms="8770" started-at="2017-03-26T23:52:02Z" finished-at="2017-03-26T23:52:10Z">
       <class name="com.myPractice.demo.regression.createAccountTests.CreateAccountTests">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteSetUp" is-config="true" duration-ms="0" started-at="2017-03-26T18:11:37Z" finished-at="2017-03-26T18:11:37Z">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteSetUp" is-config="true" duration-ms="16" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="init" is-config="true" duration-ms="141" started-at="2017-03-26T18:11:37Z" finished-at="2017-03-26T18:11:37Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="init" is-config="true" duration-ms="140" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="setUp" is-config="true" duration-ms="4988" started-at="2017-03-26T18:11:37Z" finished-at="2017-03-26T18:11:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="setUp" is-config="true" duration-ms="4805" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testCreateRndmAccount()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="testCreateRndmAccount" duration-ms="5945" started-at="2017-03-26T18:11:42Z" finished-at="2017-03-26T18:11:48Z">
+        <test-method status="PASS" signature="testNoLastNameCA()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="testNoLastNameCA" duration-ms="2461" started-at="2017-03-26T19:52:07Z" finished-at="2017-03-26T19:52:09Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCreateRndmAccount -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="cleanUp" is-config="true" duration-ms="1029" started-at="2017-03-26T18:11:48Z" finished-at="2017-03-26T18:11:49Z">
+        </test-method> <!-- testNoLastNameCA -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="cleanUp" is-config="true" duration-ms="1066" started-at="2017-03-26T19:52:09Z" finished-at="2017-03-26T19:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="endReport" is-config="true" duration-ms="281" started-at="2017-03-26T18:11:49Z" finished-at="2017-03-26T18:11:50Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="endReport" is-config="true" duration-ms="281" started-at="2017-03-26T19:52:10Z" finished-at="2017-03-26T19:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-03-26T18:11:50Z" finished-at="2017-03-26T18:11:50Z">
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteCleanUp" is-config="true" duration-ms="1" started-at="2017-03-26T19:52:10Z" finished-at="2017-03-26T19:52:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
