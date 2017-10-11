@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Himanshu Keskar\AppData\Local\Temp\testng-eclipse-2051726974\testng-customsuite.xml</span>
+                    <span>C:\Users\Himanshu Keskar\AppData\Local\Temp\testng-eclipse-2070338317\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.myPractice.demo.regression.createAccountTests.CreateAccountTests" hash-for-method="testNoLastNameCA">testNoLastNameCA</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.myPractice.demo.regression.loginTests.LoginTests" hash-for-method="testDataProviderInvalidUsrNmPassWd(uname, pword)">testDataProviderInvalidUsrNmPassWd(uname, pword)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.myPractice.demo.regression.loginTests.LoginTests" hash-for-method="testDataProviderInvalidUsrNmPassWd(UserName, Password)">testDataProviderInvalidUsrNmPassWd(UserName, Password)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.myPractice.demo.regression.loginTests.LoginTests" hash-for-method="testDataProviderInvalidUsrNmPassWd(username1, password1)">testDataProviderInvalidUsrNmPassWd(username1, password1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -120,14 +130,31 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.myPractice.demo.regression.createAccountTests.CreateAccountTests</span>
+              <span class="class-name">com.myPractice.demo.regression.loginTests.LoginTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testNoLastNameCA">
-                  </a> <!-- testNoLastNameCA -->
-                  <span class="method-name">testNoLastNameCA</span>
+                  <a name="testDataProviderInvalidUsrNmPassWd(uname, pword)">
+                  </a> <!-- testDataProviderInvalidUsrNmPassWd(uname, pword) -->
+                  <span class="method-name">testDataProviderInvalidUsrNmPassWd</span>
+                  <span class="parameters">(uname, pword)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDataProviderInvalidUsrNmPassWd(UserName, Password)">
+                  </a> <!-- testDataProviderInvalidUsrNmPassWd(UserName, Password) -->
+                  <span class="method-name">testDataProviderInvalidUsrNmPassWd</span>
+                  <span class="parameters">(UserName, Password)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDataProviderInvalidUsrNmPassWd(username1, password1)">
+                  </a> <!-- testDataProviderInvalidUsrNmPassWd(username1, password1) -->
+                  <span class="method-name">testDataProviderInvalidUsrNmPassWd</span>
+                  <span class="parameters">(username1, password1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +162,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Himanshu Keskar\AppData\Local\Temp\testng-eclipse-2051726974\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Himanshu Keskar\AppData\Local\Temp\testng-eclipse-2070338317\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -144,11 +171,11 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.myPractice.demo.regression.createAccountTests.CreateAccountTests&quot;&gt;
+      &lt;class name=&quot;com.myPractice.demo.regression.loginTests.LoginTests&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testNoLastNameCA&quot;/&gt;
+          &lt;include name=&quot;testDataProviderInvalidUsrNmPassWd&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.myPractice.demo.regression.createAccountTests.CreateAccountTests --&gt;
+      &lt;/class&gt; &lt;!-- com.myPractice.demo.regression.loginTests.LoginTests --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -188,11 +215,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testNoLastNameCA')
-data.setCell(0, 2, 'com.myPractice.demo.regression.createAccountTests.CreateAccountTests')
-data.setCell(0, 3, 2461);
+data.setCell(0, 1, 'testDataProviderInvalidUsrNmPassWd')
+data.setCell(0, 2, 'com.myPractice.demo.regression.loginTests.LoginTests')
+data.setCell(0, 3, 897);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testDataProviderInvalidUsrNmPassWd')
+data.setCell(1, 2, 'com.myPractice.demo.regression.loginTests.LoginTests')
+data.setCell(1, 3, 836);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testDataProviderInvalidUsrNmPassWd')
+data.setCell(2, 2, 'com.myPractice.demo.regression.loginTests.LoginTests')
+data.setCell(2, 3, 831);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -212,31 +247,37 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">10 ignored methods</span>
+            <span class="header-content">13 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.myPractice.demo.regression.createAccountTests.CreateAccountTests</span>
+              <span class="ignored-class-name">com.myPractice.demo.regression.loginTests.LoginTests</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">testRandCreateAccount</span>
+                <br/>
+                <span class="ignored-method-name">testPasswordChanged</span>
+                <br/>
+                <span class="ignored-method-name">testBlankPassword</span>
+                <br/>
+                <span class="ignored-method-name">testBlankUserName</span>
+                <br/>
+                <span class="ignored-method-name">testInvalidPassword</span>
+                <br/>
+                <span class="ignored-method-name">testCreateAccount</span>
+                <br/>
+                <span class="ignored-method-name">testParamInvalidUsrNmPassWd</span>
+                <br/>
+                <span class="ignored-method-name">testInvalidUsrNmPassWd</span>
+                <br/>
+                <span class="ignored-method-name">testAccessAboutPg</span>
+                <br/>
                 <span class="ignored-method-name">testValidUserNamePasswd</span>
                 <br/>
                 <span class="ignored-method-name">testAccessCreateAccountPg</span>
                 <br/>
-                <span class="ignored-method-name">testNoGenderNameCA</span>
+                <span class="ignored-method-name">testAccessForgotPasswordPg</span>
                 <br/>
-                <span class="ignored-method-name">testNoEmailNameCA</span>
-                <br/>
-                <span class="ignored-method-name">testNoPlayerTypeNameCA</span>
-                <br/>
-                <span class="ignored-method-name">testCreateRndmAccount</span>
-                <br/>
-                <span class="ignored-method-name">testCreateAccount</span>
-                <br/>
-                <span class="ignored-method-name">testDataProviderInvalidUsrNmPassWd</span>
-                <br/>
-                <span class="ignored-method-name">testParamInvalidUsrNmPassWd</span>
-                <br/>
-                <span class="ignored-method-name">testNoFirstNameCA</span>
+                <span class="ignored-method-name">testXMLValidUserNamePasswd</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -248,34 +289,58 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.myPractice.demo.regression.createAccountTests.CreateAccountTests</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.myPractice.demo.regression.loginTests.LoginTests</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">suiteSetUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">init</span>
-                <span class="method-start">16 ms</span>
+                <span class="method-start">31 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">171 ms</span>
+                <span class="method-start">185 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testNoLastNameCA</span>
-                <span class="method-start">4976 ms</span>
+                <span class="method-name">testDataProviderInvalidUsrNmPassWd(username1, password1)</span>
+                <span class="method-start">5441 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp</span>
-                <span class="method-start">7439 ms</span>
+                <span class="method-name">getResult([TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProvide...)</span>
+                <span class="method-start">6340 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">7340 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDataProviderInvalidUsrNmPassWd(uname, pword)</span>
+                <span class="method-start">12041 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProvide...)</span>
+                <span class="method-start">12878 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">13730 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testDataProviderInvalidUsrNmPassWd(UserName, Password)</span>
+                <span class="method-start">18191 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProvide...)</span>
+                <span class="method-start">19023 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">8505 ms</span>
+                <span class="method-start">19899 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">suiteCleanUp</span>
-                <span class="method-start">8819 ms</span>
+                <span class="method-start">20307 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

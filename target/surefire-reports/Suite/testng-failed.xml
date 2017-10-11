@@ -16,12 +16,12 @@
           <include name="endReport"/>
           <include name="testInvalidPassword"/>
           <include name="getResult"/>
-          <include name="testCreateAccount"/>
           <include name="testInvalidUsrNmPassWd"/>
           <include name="testParamInvalidUsrNmPassWd"/>
           <include name="testAccessCreateAccountPg"/>
           <include name="testValidUserNamePasswd"/>
           <include name="testAccessForgotPasswordPg"/>
+          <include name="testXMLValidUserNamePasswd"/>
           <include name="suiteCleanUp"/>
         </methods>
       </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->

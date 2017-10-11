@@ -1,41 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="13" total="16" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8770" started-at="2017-03-26T23:52:02Z" finished-at="2017-03-26T23:52:10Z">
+  <suite name="Default suite" duration-ms="20236" started-at="2017-10-11T19:53:07Z" finished-at="2017-10-11T19:53:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8770" started-at="2017-03-26T23:52:02Z" finished-at="2017-03-26T23:52:10Z">
-      <class name="com.myPractice.demo.regression.createAccountTests.CreateAccountTests">
-        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteSetUp" is-config="true" duration-ms="16" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:02Z">
+    <test name="Default test" duration-ms="20236" started-at="2017-10-11T19:53:07Z" finished-at="2017-10-11T19:53:27Z">
+      <class name="com.myPractice.demo.regression.loginTests.LoginTests">
+        <test-method status="PASS" signature="suiteSetUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="suiteSetUp" is-config="true" duration-ms="16" started-at="2017-10-11T15:53:07Z" finished-at="2017-10-11T15:53:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="init" is-config="true" duration-ms="140" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:02Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="init" is-config="true" duration-ms="132" started-at="2017-10-11T15:53:07Z" finished-at="2017-10-11T15:53:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="setUp" is-config="true" duration-ms="4805" started-at="2017-03-26T19:52:02Z" finished-at="2017-03-26T19:52:07Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="setUp" is-config="true" duration-ms="5256" started-at="2017-10-11T15:53:07Z" finished-at="2017-10-11T15:53:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testNoLastNameCA()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="testNoLastNameCA" duration-ms="2461" started-at="2017-03-26T19:52:07Z" finished-at="2017-03-26T19:52:09Z">
+        <test-method status="PASS" signature="testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="testDataProviderInvalidUsrNmPassWd" duration-ms="897" started-at="2017-10-11T15:53:13Z" data-provider="SearchProvider" finished-at="2017-10-11T15:53:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[username1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNoLastNameCA -->
-        <test-method status="PASS" signature="cleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="cleanUp" is-config="true" duration-ms="1066" started-at="2017-03-26T19:52:09Z" finished-at="2017-03-26T19:52:10Z">
+        </test-method> <!-- testDataProviderInvalidUsrNmPassWd -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="getResult" is-config="true" duration-ms="1000" started-at="2017-10-11T15:53:14Z" finished-at="2017-10-11T15:53:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cleanUp -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="endReport" is-config="true" duration-ms="281" started-at="2017-03-26T19:52:10Z" finished-at="2017-03-26T19:52:10Z">
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="setUp" is-config="true" duration-ms="4700" started-at="2017-10-11T15:53:15Z" finished-at="2017-10-11T15:53:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="testDataProviderInvalidUsrNmPassWd" duration-ms="836" started-at="2017-10-11T15:53:19Z" data-provider="SearchProvider" finished-at="2017-10-11T15:53:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[uname]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[pword]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataProviderInvalidUsrNmPassWd -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="getResult" is-config="true" duration-ms="852" started-at="2017-10-11T15:53:20Z" finished-at="2017-10-11T15:53:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="setUp" is-config="true" duration-ms="4461" started-at="2017-10-11T15:53:21Z" finished-at="2017-10-11T15:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="testDataProviderInvalidUsrNmPassWd" duration-ms="831" started-at="2017-10-11T15:53:25Z" data-provider="SearchProvider" finished-at="2017-10-11T15:53:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UserName]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Password]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataProviderInvalidUsrNmPassWd -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="getResult" is-config="true" duration-ms="875" started-at="2017-10-11T15:53:26Z" finished-at="2017-10-11T15:53:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDataProviderInvalidUsrNmPassWd status=SUCCESS method=LoginTests.testDataProviderInvalidUsrNmPassWd(java.lang.String, java.lang.String)[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="endReport" is-config="true" duration-ms="353" started-at="2017-10-11T15:53:27Z" finished-at="2017-10-11T15:53:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.createAccountTests.CreateAccountTests@3bfdc050]" name="suiteCleanUp" is-config="true" duration-ms="1" started-at="2017-03-26T19:52:10Z" finished-at="2017-03-26T19:52:10Z">
+        <test-method status="PASS" signature="suiteCleanUp()[pri:0, instance:com.myPractice.demo.regression.loginTests.LoginTests@3bfdc050]" name="suiteCleanUp" is-config="true" duration-ms="0" started-at="2017-10-11T15:53:27Z" finished-at="2017-10-11T15:53:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteCleanUp -->
-      </class> <!-- com.myPractice.demo.regression.createAccountTests.CreateAccountTests -->
+      </class> <!-- com.myPractice.demo.regression.loginTests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
